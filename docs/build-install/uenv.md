@@ -75,7 +75,7 @@ The id  of the image is a unique identifier derived from the sha256 hash of the 
 ## Downloading uenv
 
 To use a uenv, it first has to be pulled from the registry to local storage where you can access it.
-For example, to use the `prgenv-gnu` uenv, use the uenv image pull command:
+For example, to use the `prgenv-gnu` uenv, use the `uenv image pull` command:
 
 ```terminal title="uenv image pull"
 # The following commands have the same effect
