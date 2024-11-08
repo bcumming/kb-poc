@@ -1,0 +1,26 @@
+name: Upload docs
+
+on:
+  workflow_run:
+    workflows: ["build docs (PR)"]
+    types:
+      - completed
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Upload docs from GH artifacts
+        id: download-artifact
+        uses: dawidd6/action-download-artifact@v6
+        with:
+          name: docs
+          workflow: docs_pr.yaml
+          allow_forks: true
+          workflow_conclusion: success
+      - name: Upload coverage report
+        shell: bash
+        run: |
+            ls -alh
+            PR_NBR=$(cat pr_number.txt)
+            curl --data-binary @site.tar.gz -H "Authorization: Bearer ${{ secrets.UPLOAD_TOKEN }}" https://docs-kb.tds.cscs.ch/upload?path=$PR_NBR
