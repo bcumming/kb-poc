@@ -29,3 +29,7 @@
   -webkit-mask-image: var(--md-admonition-icon--alps);
           mask-image: var(--md-admonition-icon--alps);
 }
+
+.md-nav__item .md-nav__link--active {
+    font-weight: bold;
+}
