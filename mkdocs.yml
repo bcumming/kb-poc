@@ -17,9 +17,7 @@ nav:
     - Developers:
       - faq/developers/index.md
   - 'Rationale':
-    - rationale.md
-  - 'Template':
-    - template/index.md
+    - rationale/index.md
 theme:
   name: material
   language: en
