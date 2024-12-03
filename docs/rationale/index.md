@@ -130,7 +130,7 @@ The workflow for an individual to update the documentation would like like the f
 5. create a pull request on the GitHub site
 6. documentation is automatically built and a "TDS link" is generated for reviewers
     - the link for each PR is unique
-        - e.g. the documentation for the pull request for this page: 
+        - e.g. the draft documentation for PR that merged this page is here: [docs-kb.tds.cscs.ch/5/](https://docs-kb.tds.cscs.ch/5/)
 7. **(optional)** request reviews from stakeholders
     - anybody with a GitHub account can be a reviewer
     - users can be asked for feedback on the draft docs.
