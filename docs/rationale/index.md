@@ -198,8 +198,11 @@ Restructured Text (RST) + Sphinx
     * Markdown is generally easier to write and read
     * RST has more features
     * It comes down to personal choice
+    * sphinx also supports markdown, through a plugin
 * the default look and feel looks quite dated
     * there are [good themes available](https://sphinx-themes.org/).
+        * [sphinx-immaterial](https://jbms.github.io/sphinx-immaterial/) is a sphinx theme based on the Material for MkDocs theme
+* Overall same capabilities as MkDocs but is not as polished out of the box
 
 
 ## Next Steps
