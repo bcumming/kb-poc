@@ -36,12 +36,20 @@
 
     [:octicons-arrow-right-24: uenv](build-install/uenv.md)
 
+-   :fontawesome-solid-fire: __Use tools__
+
+    ---
+
+    Use tools
+
+    [:octicons-arrow-right-24: tools](tools/index.md)
+
 -   :fontawesome-regular-comments: __Chat__
 
     ---
 
     Discuss Alps with other users and CSCS staff on Slack.
 
-    [:octicons-arrow-right-24: uenv](https://cscs-users.slack.com/)
+    [:octicons-arrow-right-24: chat](https://cscs-users.slack.com/)
 
 </div>

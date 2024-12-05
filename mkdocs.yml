@@ -12,6 +12,9 @@ nav:
     - 'uenv': build-install/uenv.md
     - 'Cray Programming Environment (CPE)': build-install/cpe.md
     - 'Python with pip': build-install/pip.md
+  - Tools:
+    - tools/index.md
+    - 'debugging': tools/debugging/linaro_ddt.md
   - 'Frequently asked questions':
     - faq/index.md
     - Developers:
