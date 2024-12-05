@@ -93,13 +93,9 @@ This documentation is in a GitHub repository [bcumming/kb-poc](https://github.co
 
 ### Editing
 
-There are two ways to edit the documentation, depending on the scope of the changes, and the need for review.
+There are two ways to edit the documentation, depending on the scope of the changes.
 
-1. Small changes (fixing typos, spelling, etc) can be made directly using the text editor in the GitHub site, and merged directly without review or PR.
-
-    !!! note
-        only CSCS staff on an approved whitelist would be able to make direct changes like this.
-
+1. Small changes (fixing typos, spelling, etc) can be made directly using the text editor in the GitHub site.
 2. Larger changes can be made made by checking out a local copy of the code, editing and reviewing the changes locally.
 
 ### Deployment
@@ -131,9 +127,11 @@ The workflow for an individual to update the documentation would like like the f
 6. documentation is automatically built and a "TDS link" is generated for reviewers
     - the link for each PR is unique
         - e.g. the draft documentation for PR that merged this page is here: [docs-kb.tds.cscs.ch/5/](https://docs-kb.tds.cscs.ch/5/)
-7. **(optional)** request reviews from stakeholders
+7. request reviews from stakeholders
     - anybody with a GitHub account can be a reviewer
     - users can be asked for feedback on the draft docs.
+    - if no timely review has been received from code owners or requested reviewers, authorized users can approve and merge changes to avoid PRs stalling
+        - there is always room to improve, so further changes can be made in follow-up PRs
 8. merge the pull request
     - the main documentation is automatically rebuilt and redeployed by the pipeline
 
@@ -145,6 +143,7 @@ The workflow for an individual to update the documentation would like like the f
     - MarkDown for writing technical documentation
     - Git and GitHub for managing the doc
     - GitOps style workflow for review and change management
+        - [Code owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) can be set for different parts of the documentation, indicating who is/are the primary responsible people for a particular documentation page
 - MarkDown is far superior to the Confluence editor/"markdown"
     - it can be searched easily in an editor and command line
     - the material extensions allow for writing rich content
