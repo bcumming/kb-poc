@@ -12,6 +12,8 @@ nav:
   - Getting started: getting-started/index.md
   - Alps systems and platforms:
     - alps-systems/index.md
+    - 'Hardware': alps-systems/hardware.md
+    - 'Platforms': alps-systems/platforms.md
     - 'todi': alps-systems/todi.md
   - 'Building and installing software':
     - build-install/index.md
