@@ -44,29 +44,91 @@ there is no uenv loaded
 
 ## Naming uenv
 
+
 Uenv are referred to using labels, where a label has the following form `name/version:tag@system%uarch`, for example `prgenv-gnu/24.11:v2@todi%gh200`.
 
-* `name`: the name of the uenv. In this case `prgenv-gnu`.
-* `version`: the version of the uenv. In this case `24.11`.
-    * the format of `version` depends on the specific uenv. Often they use the `yy.mm` format, though they may also use the version of the software being packaged. For example the `namd/3.0.1` uenv packages version 3.0.1 of the popular [NAMD](https://www.ks.uiuc.edu/Research/namd/) simulation tool.
-* `tag`: used to differentiate between _releases_ of a versioned uenv. Some examples of tags include:
-    * `rc1`, `rc2`: release candidates.
-    * `v1`: a first release typically made after some release candidates.
-    * `v2`: a second release, that might fix issues in the first release.
-* `system`: the name of the Alps cluster for which the uenv was built.
+#### `name`
 
-| system | description |
-| ------ | ----------- |
-| todi   | an early testing system |
-| clariden | MLP... |
+the name of the uenv. In this case `prgenv-gnu`.
 
-| uarch | CPU | GPU |
-| ----- | --- | --- |
-| gh200 | 4 72-core NVIDIA Grace (`aarch64`) | 4 NVIDIA H100 GPUs |
-| a100  | 1 64-core AMD Milan (`zen3`)       | 4 NVIDIA A100 GPUs |
-| zen2  | 2 64-core AMD Rome (`zen2`)        | - |
-| zen3  | 2 64-core AMD Milan (`zen3`)       | - |
-| mi200 | 1 64-core AMD Milan (`zen3`)       | 4 AMD Mi250x GPUs  |
+#### `version`
+
+The version of the uenv. The format of `version` depends on the specific uenv.
+Often they use the `yy.mm` format, though they may also use the version of the software being packaged.
+For example the `namd/3.0.1` uenv packages version 3.0.1 of the popular [NAMD](https://www.ks.uiuc.edu/Research/namd/) simulation tool.
+
+#### `tag`
+
+Used to differentiate between _releases_ of a versioned uenv. Some examples of tags include:
+
+* `rc1`, `rc2`: release candidates.
+* `v1`: a first release typically made after some release candidates.
+* `v2`: a second release, that might fix issues in the first release.
+
+#### `system`
+
+The name of the Alps cluster for which the uenv was built.
+
+#### `uarch`
+
+The node type (microarchitecture) that the uenv is built for:
+
+| uarch | CPU | GPU | comment |
+| ----- | --- | --- | ------- |
+|[gh200]| 4 72-core NVIDIA Grace (`aarch64`) | 4 NVIDIA H100 GPUs | |
+|[zen2] | 2 64-core AMD Rome (`zen2`)        | - | used in Eiger|
+|[a100] | 1 64-core AMD Milan (`zen3`)       | 4 NVIDIA A100 GPUs | |
+|[mi200]| 1 64-core AMD Milan (`zen3`)       | 4 AMD Mi250x GPUs  | |
+| zen3  | 2 64-core AMD Milan (`zen3`)       | - | only in MCH system |
+
+[gh200]: ../alps-systems/hardware.md#nvidia-gh200-gpu-nodes
+[a100]: ../alps-systems/hardware.md#nvidia-a100-gpu-nodes
+[zen2]: ../alps-systems/hardware.md#amd-rome-cpu-nodes
+[mi200]: ../alps-systems/hardware.md#amd-mi250x-gpu-nodes
+
+### using labels
+
+The uenv command line has a flexible interface for describing
+
+```bash
+# search for all uenv on the current system that have the name prgenv-gnu
+uenv image find prgenv-gnu
+
+# search for all uenv with version 24.11
+uenv image find /24.11
+
+# search for all uenv with tag v1
+uenv image find :v1
+
+# seach for a specific version
+uenv image find prgenv-gnu/24.11:v1
+```
+
+By default, the `uenv` filters results to only those 
+
+```bash
+# log into the eiger vCluster
+ssh eiger
+
+# this command will search for all pgrenv-gnu uenv on _eiger_
+uenv image find prgenv-gnu
+
+# use @ to search on a specific system, e.g. on daint:
+uenv image find prgenv-gnu@daint
+
+# this can be used to search for all uenv on another system:
+uenv image find @daint
+
+# the '*' is a wildcard used meaining "all systems"
+# this will show all images on all systems
+uenv image find @'*'
+
+# search for all images on Alps that were built for gh200 nodes.
+uenv image find @'*'%gh200
+```
+
+!!! note
+    The wild card `*` used for "all systems" must always be escaped in single quotes: `@'*'`.
 
 ## Finding uenv
 
@@ -79,28 +141,26 @@ The available uenv images are stored in a registry, that can be queried using th
 
 ``` terminal title="uenv image find"
 > uenv image find
-uenv/version:tag                        uarch date       id               size
-prgenv-gnu/24.2:v1                      gh200 2024-05-23 3ea1945046d884ee 3.7GB
-prgenv-gnu/24.2:latest                  gh200 2024-05-23 3ea1945046d884ee 3.7GB
-namd/3.0b6:v1                           gh200 2024-05-29 e8606d64eb8dcd2f 3.7GB
-namd/3.0b6:latest                       gh200 2024-05-29 e8606d64eb8dcd2f 3.7GB
-cp2k/2024.1:v1                          gh200 2024-05-29 af81b3bbbe68a62f 3.9GB
-cp2k/2024.1:latest                      gh200 2024-05-29 af81b3bbbe68a62f 3.9GB
-arbor/v0.9:v1                           gh200 2024-05-23 69fdbd75e246d439 3.6GB
+uenv                       arch  system  id                size(MB)  date
+cp2k/2024.1:v1             zen2  eiger   2a56f1df31a4c196   2,693    2024-07-01
+cp2k/2024.2:v1             zen2  eiger   f83e95328d654c0f   2,739    2024-08-23
+cp2k/2024.3:v1             zen2  eiger   7c7369b64b5fabe5   2,740    2024-09-18
+editors/24.7:rc1           zen2  eiger   e5fb284962908eed   1,030    2024-07-18
+editors/24.7:v2            zen2  eiger   4f0f2770616135b1   1,062    2024-09-04
+julia/24.9:v1              zen2  eiger   0ff97a74dfcaa44e     539    2024-11-09
+linalg/24.11:rc1           zen2  eiger   b69f4664bf0cd1c4     770    2024-11-20
+linalg/24.11:v1            zen2  eiger   c11f6c85028abf5b     776    2024-12-03
+linalg-complex/24.11:v1    zen2  eiger   846a04b4713d469b     792    2024-12-03
+linaro-forge/24.0.2:v1     zen2  eiger   65734ce35494a5f5     313    2024-07-18
+linaro-forge/24.1:v1       zen2  eiger   b65d7c85adfb317a     344    2024-11-27
+netcdf-tools/2024:v1       zen2  eiger   e7e508c34cf40ccd   3,706    2024-11-14
+prgenv-gnu/24.11:rc4       zen2  eiger   811469b00f030493     570    2024-11-21
+prgenv-gnu/24.11:v1        zen2  eiger   0b6ab5fc4907bb38     572    2024-11-27
+prgenv-gnu/24.7:v1         zen2  eiger   7f68f4c8099de257     478    2024-07-01
+quantumespresso/v7.3.1:v1  zen2  eiger   61d1f21881a65578     864    2024-11-08
 ```
 
-The output above shows that there are four uenv (`prgenv-gnu`, `namd` , `cp2k` and `arbor`).
-
-The full name of a uenv is of the form `uenv/version:tag`
-
-* `uenv`: is the name of the uenv.
-* `version`: the version of the uenv, typically a in the form `year`, `year.month` or matching the version of the software package provided by the uenv (e.g version `3.0b6` of NAMD above)
-* `tag`: incremental tag applied to versions when they are deployed with an update, e.g v1 , v2  or latest .
-
-The id  of the image is a unique identifier derived from the sha256 hash of the image.
-
-!!! note
-    The full name and id can both be used to refer to a specific uenv.
+The output above shows that there are 12 uenv (`prgenv-gnu`, `namd` , `cp2k` and `arbor`).
 
 ## Downloading uenv
 

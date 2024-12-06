@@ -21,14 +21,4 @@ Alps enables the creation of versatile clusters (vClusters) that can be tailored
     CSCS hosts platforms for HPC, ML/AI and Climate and Weather
 
     [:octicons-arrow-right-24: Alps Platforms](platforms.md)
-
--   :fontawesome-solid-headset: __Get Help__
-
-    ---
-
-    Contact the CSCS for help.
-
-    [:octicons-arrow-right-24: Service Desk](https://jira.cscs.ch/plugins/servlet/desk)
-
 </div>
-

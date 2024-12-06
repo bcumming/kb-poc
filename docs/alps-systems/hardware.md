@@ -19,10 +19,41 @@ This approach to cooling provides greater efficiency for the rack-level cooling,
 
 ## Alps Blades
 
-### GH200: Perry Peak
+Alps was installed in phases, starting with the installation of 1024 AMD Rome dual socket CPU nodes in 2020, through to the main installation of 2,688 Grace-Hopper nodes in 2024.
 
-### A100: Grizzly Peak
+There are currently four node types in Alps, with another becoming available in 2025:
 
-### MI250x: Bard Peak
+| type           | blades | nodes | CPU sockets | GPU devices |
+| ----           | ------:| -----:| -----------:| -----------:|
+| NVIDIA GH200   | 1344   | 2688  | 10,752      | 10,752      |
+| AMD Rome       |  256   | 1024  |  2,048      | --          |
+| NVIDIA A100    |   72   |  144  |    144      | 576         |
+| AMD MI250x     |   12   |   24  |     24      |  96         |
+| AMD MI300A     |   64   |  128  |    512      | 512         |
 
-### MI300A: Parry Peak
+### NVIDIA GH200 GPU Nodes
+
+Perry Peak
+
+### AMD Rome CPU Nodes
+
+EX425
+
+### NVIDIA A100 GPU Nodes
+
+Grizzly Peak
+
+### AMD MI250x GPU Nodes
+
+Bard Peak
+
+### AMD MI300A GPU Nodes
+
+Parry Peak
+
+!!! info "coming soon"
+    H1 2025
+
+## Alps Storage
+
+TODO: storage
