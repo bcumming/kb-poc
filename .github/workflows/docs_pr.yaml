@@ -37,7 +37,6 @@ jobs:
           name: docs
           path: upload
           if-no-files-found: error
-      - name: Update PR Description with Preview URL
       - run: |
           curl -X PATCH \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
