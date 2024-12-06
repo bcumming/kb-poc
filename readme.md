@@ -22,4 +22,4 @@ To view the documentation, run the `serve` script:
 ./serve
 ```
 
-This generates the documentation locally, which can be viewed using a local link, typically [http://127.0.0.1:8000/](http://127.0.0.1:8000/) 
+This generates the documentation locally, which can be viewed using a local link, typically [http://127.0.0.1:8000/](http://127.0.0.1:8000/). The documentation will be rebuilt and the webpage reloaded when changed files are saved.
