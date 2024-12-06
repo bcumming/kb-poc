@@ -1,6 +1,12 @@
 site_name: CSCS Knowledge Base
 # TODO: change to match target deployment
-#site_url: https://bcumming.github.io
+#site_url: https://bcumming.github.io/
+
+# provide a link to the docs in top RHS corner
+repo_url: https://github.com/bcumming/kb-poc
+# provide a link to "edit this page" to each page
+edit_uri: edit/main/docs/
+
 nav:
   - Home: index.md
   - Getting started: getting-started/index.md
@@ -25,13 +31,17 @@ theme:
   #custom_dir: docs/.overrides
   features:
     - content.code.copy
+    # add an "edit this page" icon on each page
+    - content.action.edit
     - navigation.indexes
     - search.share
     - navigation.instant
     - navigation.tracking
     - navigation.path
     - navigation.top
-
+  icon:
+    # set the icon for "edit this page"
+    edit: material/pencil
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -66,8 +76,6 @@ plugins:
       pipeline:
         - trimmer
 
-
-
 markdown_extensions:
   - admonition
   - def_list
@@ -98,8 +106,4 @@ extra_javascript:
 
 extra_css:
   - stylesheets/extra.css
-
-
-# TODO: uncomment this to provide a link to the docs in top RHS corner
-#repo_url: https://github.com/bcumming/kb-poc
 
