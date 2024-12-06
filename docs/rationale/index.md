@@ -39,18 +39,27 @@ Finally, there is not support support for small screens (e.g. phones).
 
 ### Technical documentation needs good version control and lifetime management
 
+Quality technical documentation needs to make it as easy and intuitive as possible for CSCS engineers to contribute.
+The review process for the current KB does its best to work around the limitations of Confluence, but ultimately is confusing and demotivating 
+
 Confluence has history tracking on each page, however it can easily be corrupted or rewritten.
 Confluence records individual page edits, but doesn't gather them together into cohesive change sets.
 
 The following "user stories" for CSCS staff working on Confluence are the result of this:
 
-- Spend a couple of hours editing a confluence page to have all of my changes deleted because a colleague reverted to an earlier change.
-- Lose part of the page edit history when there is a reversion - we lost old documentation.
+1. Spend a couple of hours editing a confluence page to have all of my changes deleted because a colleague reverted to an earlier change.
+2. Lose part of the page edit history when there is a reversion - we lost old documentation.
+3. I want to propose a change to KB docs that would require review from another person. So I read the [how to guide](https://confluence.cscs.ch/display/SRM/How+to+create+articles+in+the+Knowledge+Base), and I give up in confusion over the steps involved, and having to copy pages between TDS and deployment.
+
+!!!note
+    Point number 3 above is not the fault of the people who created the existing KB process - it is the direct result of Confluence's limitations.
 
 The alternative should:
+
 * keep a complete record of the history;
-* allow for tracking changes that affect more than one page as single atomic changes;
-* allow external users to propose changes.
+* allow for tracking changes that affect more than one page as single atomic change;
+* show exactly what the proposed changes would look like in the deployed documentation;
+* allow CSCS users to propose changes.
 
 ### Good documentation needs good tooling for writers
 
@@ -63,15 +72,19 @@ The second audience is key - engineers need to be motivated and have good tools 
 
 The user experience for engineers using Confluence is very poor.
 
+* we beleive that this is self-evident;
+* we are happy to expand on this if needed.
+
 !!! note
     Engineers often comment that Confluence is sold to management, not engineers, because its features don't make life easier for folk writing technical documentation.
     Every engineer that we have spoken to about this proposal has expressed enthusiasm for not using Confluence.
 
 ## Proposed Solution
 
-We propose using the [material for mkdocs](https://xxx) framework for documentation, and deploy it using a CI/CD pipeline from GitHub.
+We propose using the [Material for MKDocs](https://squidfunk.github.io/mkdocs-material/) framework for documentation, and deploy it using a CI/CD pipeline from GitHub.
 
-- WS-VCUE are proposing to take responsibility for the pipeline, and tooling for helping with documentation writing
+??? question "wait, who is going to do this?"
+    WS-VCUE are proposing to take responsibility for the pipeline, and tooling for helping with documentation porting and writing.
 
 Material for MKdocs has become the gold standard for writing technical documentation.
 Here are some examples of documentation written using the same framework:
@@ -80,7 +93,7 @@ Here are some examples of documentation written using the same framework:
 - [LUMI](https://docs.lumi-supercomputer.eu/)
 - [Bristol Center for Supercomputing](https://docs.isambard.ac.uk/)
 - [Hummingbot](https://hummingbot.org/)
-- [Material MKDocs](https://squidfunk.github.io/mkdocs-material/)
+- [Material for MKDocs](https://squidfunk.github.io/mkdocs-material/)
 
 The documentation you are reading now was set up in 1 day by 1 CSCS engineer with no web development experience (@bcumming) with a simple CI/CD pipeline.
 The TDS pipeline that updated the pipeline to generate a separate site for each pull request took another engineer who knew what they were doing (@andreasfink) half a day.
@@ -89,7 +102,12 @@ The TDS pipeline that updated the pipeline to generate a separate site for each 
 
 Documentation is written in Markdown, and managed in a GitHub repository.
 
-This documentation is in a GitHub repository [bcumming/kb-poc](https://github.com/bcumming/kb-poc/), and the source for this page can be viewed [here](https://github.com/bcumming/kb-poc/blob/main/docs/rationale/index.md)
+This documentation is in a GitHub repository [bcumming/kb-poc](https://github.com/bcumming/kb-poc/), and the source for this page can be viewed [here](https://github.com/bcumming/kb-poc/blob/main/docs/rationale/index.md).
+
+!!! note
+    It is possible to view the documentation source from a link in the top of each page.
+
+    And a direct link to an online text editor for each page is available by clicking on the :material-pencil: icon in the top right hand corer.
 
 ### Editing
 
@@ -160,7 +178,7 @@ The workflow for an individual to update the documentation would like like the f
     - it is possible to gather a "working copy" of merged updates in the TDS, and deploy using a tag.
 - higher quality search
     - Confluence search is notoriously low-quality
-    - the search provided the xxx framework used by Material is better
+    - the search provided the [lunr](https://squidfunk.github.io/mkdocs-material/plugins/search/) framework used by Material is better
 - the engineers responsible for writing and maintaining most of the docs are responsible for deployment
 - MarkDown documentation written for other CSCS products and services can be integrated into our docs
     - for example, the `alps-uenv` recipes for uenv maintain documentation in markdown alongside the recipes
@@ -210,7 +228,7 @@ Restructured Text (RST) + Sphinx
     - Service Managers
     - Working structures responsible for writing user-facing documentation
 2. identify key requirements that have to be met by the proposed solution based on feedback.
-3. address the 
+3. develop and solution or proposal for each requirement.
 4. make the decision **(todo: who makes the decision)**
 3. **(if approved)** port the current KB docs to markdown
     - BC, AF, MS, JC offer to do a lot of heavy lifting here - WS responsible for individual pages will be required to review the results.
