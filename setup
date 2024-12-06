@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -e
+
+prefix="$(pwd)"
+env="$prefix/pyenv"
+
+[[ -d "$env" ]] && echo "=== the environment has already been configured" && exit 0
+
+python3 -m venv "$env"
+
+source "$env/bin/activate"
+
+pip install --upgrade pip
+pip install -r "$prefix/requirements.txt"
+
