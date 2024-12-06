@@ -1,15 +1,14 @@
 Uenv are user environments that provide scientific applications, libraries and tools on Alps. This article will explain how to activate uenv, use them to build software and how to enable them in SLURM jobs.
 
-Unlike the standard Cray Programming Environment (CPE), which aims to provide a complete software stack that can be configured to build all types of software on all node architectures, uenv are typically application-specific, domain-specific or tool-specific - each uenv contains only what is required for the application or tools that it provides.
+Uenv are typically application-specific, domain-specific or tool-specific - each uenv contains only what is required for the application or tools that it provides.
 
-User environments are packaged in a single file (in the  SquashFS file format), that stores a compressed directory tree that contains all of the software, tools and other information like modules, required to provide a rich environment.
+Each uenv is packaged in a single file (in the [Squashfs](https://docs.kernel.org/filesystems/squashfs.html) file format), that stores a compressed directory tree that contains all of the software, tools and other information like modules, required to provide a rich environment.
 
 Each environment contains a software stack, comprised of compilers, libraries, tools and scientific applications, built using Spack.
 
-??? info "build your own uenv"
-    For more information on how CSCS builds user environments, have a look at the documentation for the Stackinator tool that CSCS use to configure Spack to build environments with optimisations for the Alps architecture.
+!!! warning
 
-    This tool can also be used by motivated users to provide their own software stacks.
+    This documentation is for the new uenv2 implementation of uenv, that is not yet installed on Alps.
 
 ## Getting started
 
@@ -25,18 +24,49 @@ there is no uenv loaded
 !!! howto "installing uenv"
     The command line tool can be installed from source, if you are working on a cluster that does not have uenv installed, or if you need to test a new version.
 
-    ```terminal title="manually installing uenv in the terminal"
-    > git clone https://github.com/eth-cscs/uenv.git
-    > cd uenv
+    ```bash title="manually installing uenv in the terminal"
+    git clone https://github.com/eth-cscs/uenv2.git
+    cd uenv2
+
     # run the installation script.
-    # if this is the first time that you are installing uenv,
-    # type "yes" or "y" when prompted whether to update your ~/.bashrc file.
-    > ./install --local
+    # this will install uenv2 in $HOME/.local/$(uname -m)/
+    ./install-alps-local.sh
+
+    # update bashrc
+    echo "export PATH=\$HOME/.local/\$(uname -m)/bin:\$PATH" >> $HOME/.bashrc
+    echo "unset -f uenv" >> $HOME/.bashrc
     ```
 
 
     !!! warning
         Before uenv can be used, you need to log out then back in again and type "uenv --version" to verify that uenv has been installed.
+        The version should be `6.0.0-dev` if succesfull.
+
+## Naming uenv
+
+Uenv are referred to using labels, where a label has the following form `name/version:tag@system%uarch`, for example `prgenv-gnu/24.11:v2@todi%gh200`.
+
+* `name`: the name of the uenv. In this case `prgenv-gnu`.
+* `version`: the version of the uenv. In this case `24.11`.
+    * the format of `version` depends on the specific uenv. Often they use the `yy.mm` format, though they may also use the version of the software being packaged. For example the `namd/3.0.1` uenv packages version 3.0.1 of the popular [NAMD](https://www.ks.uiuc.edu/Research/namd/) simulation tool.
+* `tag`: used to differentiate between _releases_ of a versioned uenv. Some examples of tags include:
+    * `rc1`, `rc2`: release candidates.
+    * `v1`: a first release typically made after some release candidates.
+    * `v2`: a second release, that might fix issues in the first release.
+* `system`: the name of the Alps cluster for which the uenv was built.
+
+| system | description |
+| ------ | ----------- |
+| todi   | an early testing system |
+| clariden | MLP... |
+
+| uarch | CPU | GPU |
+| ----- | --- | --- |
+| gh200 | 4 72-core NVIDIA Grace (`aarch64`) | 4 NVIDIA H100 GPUs |
+| a100  | 1 64-core AMD Milan (`zen3`)       | 4 NVIDIA A100 GPUs |
+| zen2  | 2 64-core AMD Rome (`zen2`)        | - |
+| zen3  | 2 64-core AMD Milan (`zen3`)       | - |
+| mi200 | 1 64-core AMD Milan (`zen3`)       | 4 AMD Mi250x GPUs  |
 
 ## Finding uenv
 
