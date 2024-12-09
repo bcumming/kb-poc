@@ -40,7 +40,7 @@
 
     ---
 
-    Contact the CSCS for help.
+    Contact the CSCS Service Desk for help.
 
     [:octicons-arrow-right-24: Service Desk](https://jira.cscs.ch/plugins/servlet/desk)
 
