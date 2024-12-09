@@ -34,11 +34,11 @@ export PATH=$PWD/uenv-spack:$PATH
 In this example we use the `prgenv-gnu` uenv, which provides a selection of commonly used HPC tools and libraries, including `cray-mpich`, `gcc`, `python`, `fftw`.
 
 ??? example "How to download the uenv"
-```bash
-# list all releases of the November 2024 version, then pull down the desired version
-uenv image find prgenv-gnu/24.11
-uenv image pull prgenv-gnu/24.11:v1
-```
+    ```bash
+    # list all releases of the November 2024 version, then pull down the desired version
+    uenv image find prgenv-gnu/24.11
+    uenv image pull prgenv-gnu/24.11:v1
+    ```
 
 To use Spack as an upstream, the uenv has to be started with the `spack` view:
 
@@ -58,22 +58,35 @@ uenv start prgenv-gnu/24.11:v1 --view=spack
     | `UENV_SPACK_URL`         | `https://github.com/spack/spack.git` | The git repository for Spack - nearly always the main spack/spack repository. |
     | `UENV_SPACK_COMMIT`      | `c6d4037758140fe15913c29e80cd1547f388ae51` | The commit of Spack that was used |
 
-To install a concrete set of specs:
-```
-uenv-spack $SCRATCH/install/tools --uarch=gh200 --specs="tree, screen, emacs +treesitter"
-cd $SCRATCH/install/tools
-./build
-```
+### Create the build path
 
-To install a concrete set of specs:
+Create a build path with a template `spack.yaml` and `repo`:
 ```
 uenv-spack $SCRATCH/install/arbor --uarch=gh200
 cd $SCRATCH/install/tools
 ./build
 ```
 
+Create a build path and populate the `spack.yaml` file with some [specs]:
 ```
-uenv-spack $SCRATCH/install/arbor --uarch=gh200
+uenv-spack $SCRATCH/install/tools --uarch=gh200 \
+           --specs="tree, screen, emacs +treesitter"
+cd $SCRATCH/install/tools
+./build
+```
+
+Create a build path and use a pre-configured `spack.yaml` and `repo`:
+```
+uenv-spack $SCRATCH/install/arbor --uarch=gh200 \
+           --recipe=<path-to-recipe>
+cd $SCRATCH/install/tools
+./build
+```
+
+**todo** Create a build path and use your own `spack.yaml`:
+```
+uenv-spack $SCRATCH/install/arbor --uarch=gh200 \
+           --recipe=<path-to-spack.yaml>
 cd $SCRATCH/install/tools
 ./build
 ```
@@ -84,10 +97,5 @@ cd $SCRATCH/install/tools
 [Spack Basic Usage]: https://spack.readthedocs.io/en/latest/basic_usage.html
 [Stackinator]: https://eth-cscs.github.io/stackinator/
 [Spack configuration files]: https://spack.readthedocs.io/en/latest/configuration.html
-[Quantum ESPRESSO]: https://www.quantum-espresso.org
-[Quantum ESPRESSO Spack package]: https://packages.spack.io/package.html?name=quantum-espresso
-[Spack Environments]: https://spack.readthedocs.io/en/latest/environments.html
-[Spack environment]: https://spack.readthedocs.io/en/latest/environments.html
-[Spack Filesystem Views]: https://spack.readthedocs.io/en/latest/environments.html#filesystem-views
-[Spack Getting Started]: https://spack.readthedocs.io/en/latest/getting_started.html
 [spec]: https://spack.readthedocs.io/en/latest/basic_usage.html#sec-specs
+[specs]: https://spack.readthedocs.io/en/latest/basic_usage.html#sec-specs
