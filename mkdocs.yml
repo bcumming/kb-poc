@@ -15,9 +15,13 @@ nav:
     - 'Hardware': alps-systems/hardware.md
     - 'Platforms': alps-systems/platforms.md
     - 'todi': alps-systems/todi.md
+  - 'Tools':
+    - tools/index.md
+    - 'uenv': tools/uenv.md
   - 'Building and installing software':
     - build-install/index.md
     - 'uenv': build-install/uenv.md
+    - 'Containers': build-install/containers.md
     - 'Cray Programming Environment (CPE)': build-install/cpe.md
     - 'Python with pip': build-install/pip.md
   - 'Frequently asked questions':
