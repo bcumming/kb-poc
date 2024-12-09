@@ -20,6 +20,22 @@
 
     [:octicons-arrow-right-24: Building and Installing Software](build-install/index.md)
 
+-   :fontawesome-solid-mountain-sun: __Alps__
+
+    ---
+
+    Learn about the Alps instrastructure.
+
+    [:octicons-arrow-right-24: Alps](alps-systems/index.md)
+
+-   :fontawesome-solid-hammer: __Use a uenv__
+
+    ---
+
+    Use software stacks built by the CSCS experts.
+
+    [:octicons-arrow-right-24: uenv](build-install/uenv.md)
+
 -   :fontawesome-solid-headset: __Get Help__
 
     ---
@@ -28,20 +44,12 @@
 
     [:octicons-arrow-right-24: Service Desk](https://jira.cscs.ch/plugins/servlet/desk)
 
--   :material-scale-balance: __Use a uenv__
-
-    ---
-
-    Use software stacks built by the CSCS experts.
-
-    [:octicons-arrow-right-24: uenv](build-install/uenv.md)
-
 -   :fontawesome-regular-comments: __Chat__
 
     ---
 
     Discuss Alps with other users and CSCS staff on Slack.
 
-    [:octicons-arrow-right-24: uenv](https://cscs-users.slack.com/)
+    [:octicons-arrow-right-24: CSCS User Slack](https://cscs-users.slack.com/)
 
 </div>
