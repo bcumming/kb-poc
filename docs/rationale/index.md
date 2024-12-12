@@ -240,6 +240,23 @@ Restructured Text (RST) + Sphinx
         * [sphinx-immaterial](https://jbms.github.io/sphinx-immaterial/) is a sphinx theme based on the Material for MkDocs theme
 * Overall same capabilities as MkDocs but is not as polished out of the box
 
+## Blockers
+
+This is a list of blockers that have to be addressed.
+
+!!! note "SD Integration"
+    Documentation needs to be well-integrated with the service desk, so that links to suggested articles are provided based on the text and title of the request.
+
+!!! note "Storage of images"
+    Adding images to Confluence is easy.
+    
+    Images in a Git repository can grow the size of the repository over time, and make cloning and managing the repository unweildy over time.
+
+    How do we manage this
+
+!!! note "Change management"
+    Define the workflow for making changes. In the proposal we have made suggestions, and observe that git and GitHub facilitate better processes, however we have not prescribed a concrete workflow.
+
 
 ## Next Steps
 
