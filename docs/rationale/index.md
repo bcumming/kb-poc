@@ -63,7 +63,7 @@ The second audience is key - engineers need to be motivated and have good tools 
 
 The user experience for engineers using Confluence is very poor.
 
-* we beleive that this is self-evident;
+* we believe that this is self-evident;
 * we are happy to expand on this if needed.
 
 !!! note
