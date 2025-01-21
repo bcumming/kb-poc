@@ -18,7 +18,7 @@ After logging into an Alps cluster, you can quickly check the availability of ue
 > uenv status
 there is no uenv loaded
 > uenv --version
-5.1.0
+7.0.0
 ```
 
 !!! howto "installing uenv"
