@@ -54,3 +54,9 @@
   border-color: #121417;
 }
 
+/* code hilighting */
+/* pale yellow background, solid black foreground */
+:root > * {
+  --md-code-bg-color: #faf8ed;
+  --md-code-fg-color: #000000;
+}
