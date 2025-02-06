@@ -8,13 +8,23 @@ repo_url: https://github.com/bcumming/kb-poc
 edit_uri: edit/main/docs/
 
 nav:
-  - Home: index.md
-  - Getting started: getting-started/index.md
-  - Alps systems and platforms:
-    - alps-systems/index.md
-    - 'Hardware': alps-systems/hardware.md
-    - 'Platforms': alps-systems/platforms.md
-    - 'todi': alps-systems/todi.md
+  - Welcome: index.md
+  - 'Alps':
+    - alps/index.md
+    - 'Hardware': alps/hardware.md
+    - 'Network': alps/network.md
+    - 'Storage': alps/storage.md
+    - 'vClusters': alps/vclusters.md
+    - 'Tenants': alps/tenants.md
+  - 'Platforms':
+    - platforms/index.md
+    - 'Machine Learning Platform': platforms/mlp.md
+    - 'todi': platforms/todi.md
+  - 'Access':
+    - access/index.md
+    - 'MFA': access/mfa.md
+    - 'UMP': access/ump.md
+    - 'Waldur': access/waldur.md
   - 'Tools':
     - tools/index.md
     - 'uenv': tools/uenv.md
