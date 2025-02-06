@@ -27,7 +27,7 @@ jobs:
       - run: rm -rf site
       - run: "sed -i -e 's|^#\\?site_url:.*|site_url: https://docs-kb.tds.cscs.ch/${{ github.event.pull_request.number }}|' mkdocs.yml"
       - run: cat mkdocs.yml
-      - run: mkdocs build
+      - run: mkdocs build --strict
       - run: |
           mkdir upload
           env --chdir=site tar -czf ../upload/site.tar.gz .
