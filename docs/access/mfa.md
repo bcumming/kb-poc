@@ -1,10 +1,11 @@
 # Multi Factor Authentification
 
-**TODO** This needs to be refactored somewhat to include all of the docs from the following locations
+!!! todo
+    This needs to be refactored somewhat to include all of the docs from the following locations
 
-* [main mfa page](https://confluence.cscs.ch/pages/viewpage.action?pageId=794296407)
-* [windows](https://confluence.cscs.ch/display/KB/Connecting+to+CSCS+systems+through+MFA+on+Windows)
-* [reset otp](https://confluence.cscs.ch/display/KB/Reset+OTP)
+    * [main mfa page](https://confluence.cscs.ch/pages/viewpage.action?pageId=794296407)
+    * [windows](https://confluence.cscs.ch/display/KB/Connecting+to+CSCS+systems+through+MFA+on+Windows)
+    * [reset otp](https://confluence.cscs.ch/display/KB/Reset+OTP)
 
 !!! note
     Below is a cut and past of part of the docs from the first link above - I stop and rethink how we want to organise these docs before continuing
@@ -76,7 +77,8 @@ Steps:
 5. To complete the OTP registration process, please enter the 6 digit OTP from the authenticator app at the bottom of the the same QR code page. Optionally, you can input your device name where you imported the OTP seed by scanning the QR code
 6. On successful registration you will be logged into the CSCS web application that you accessed in step-1
 
-**TODO** do we need the images from KB?
+!!! todo
+    do we need the images from KB?
 
 ## Using MFA to acccess web-based services
 After having completed the setup of your authenticator, you will be asked to enter your login/password and the OTP to access all web-based services.
@@ -91,7 +93,8 @@ After having completed the setup of your authenticator, you will be asked to ent
     When replacing your smartphone remember to sync the authenticator app before resetting the old smartphone.
     Otherwise, you will have to reset the CSCS MFA, by opening a ticket
 
-**TODO** finish copying docs. I think that we should probably refactor these to multiple pages
+!!! todo
+    finish copying docs. I think that we should probably refactor these to multiple pages
 
-* move the windows and resetting otp docs to this page
-* make using MFA to log in its own page.
+    * move the windows and resetting otp docs to this page
+    * make using MFA to log in its own page.

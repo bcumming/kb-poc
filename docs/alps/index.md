@@ -30,4 +30,10 @@ Alps enables the creation of versatile clusters (vClusters) that can be tailored
 
     [:octicons-arrow-right-24: Alps vClusters](vclusters.md)
 
+-   :fontawesome-solid-signs-post: __Tenants__
+
+    Alps is a multi-tenant system.
+
+    [:octicons-arrow-right-24: Alps Tenants](tenants.md)
+
 </div>

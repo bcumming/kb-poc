@@ -8,7 +8,8 @@ Welcome to the CSCS Knowledge Base - the home of technical documentation for Alp
 
     Learn about the Alps instrastructure.
 
-    **TODO** add links to hardware, storage, network.
+    !!! todo
+        add links to hardware, storage, network.
 
     [:octicons-arrow-right-24: Alps](alps/index.md)
 

@@ -2,7 +2,8 @@
 
 Alps is a HPE Cray EX3000 system, a liquid cooled blade-based, high-density system.
 
-**TODO** this is a skeleton.
+!!! todo
+    this is a skeleton - all of the details need to be filled in
 
 ## Alps Cabinets
 

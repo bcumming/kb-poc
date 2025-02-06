@@ -1,13 +1,13 @@
 # Alps Storage
 
-**TODO** Document the main storage hardware attached to Alps:
+!!! todo
+    Document the main storage hardware attached to Alps:
 
-* capstor
-* iopstor
-* vast
+    * capstor
+    * iopstor
+    * vast
 
-The focus of these docs would be the basic details.
+    The focus of these docs would be the basic details.
 
-The mounts, and how they are used for SCRATCH, STORE, PROJECT, HOME would be in the [storage docs](../storage/index.md)
-
+    The mounts, and how they are used for SCRATCH, STORE, PROJECT, HOME would be in the [storage docs](../storage/index.md)
 
