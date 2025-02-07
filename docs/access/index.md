@@ -8,7 +8,7 @@ Users at CSCS typically have one account that can be used to access all services
 
     A guide to setting up and using MFA.
 
-    [:octicons-arrow-right-24: Setting up and use MFA](mfa.md)
+    [:octicons-arrow-right-24: Setting up and use MFA][mfa]
 
 -   :fontawesome-solid-mountain-sun: __Getting Access__
 

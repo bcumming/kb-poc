@@ -4,33 +4,45 @@ Welcome to the CSCS Knowledge Base - the home of technical documentation for Alp
 
 <div class="grid cards" markdown>
 
--   :fontawesome-solid-mountain-sun: __Alps__
-
-    Learn about the Alps instrastructure.
-
-    !!! todo
-        add links to hardware, storage, network.
-
-    [:octicons-arrow-right-24: Alps](alps/index.md)
-
--   :fontawesome-solid-mountain-sun: __Getting Access__
-
-    A project is required to get access to resources on Alps.
-    Instructions on how to submit a project proposal is available on the main CSCS web site.
-
-    [:octicons-arrow-right-24: Applying for an Alps project](https://www.cscs.ch/user-lab/applying-for-accounts)
-
 -   :fontawesome-solid-layer-group: __Platforms__
 
-    Alps hosts multiple systems that are configured
+    Once you have a project at CSCS, start here to find your platform:
 
     [:octicons-arrow-right-24: Platforms overview](platforms/index.md)
+
+    Go straight to the documentation for the platform that hosts your project:
 
     [:octicons-arrow-right-24: Machine Learning Platform](platforms/mlp.md)
 
     [:octicons-arrow-right-24: HPC Platform](platforms/mlp.md)
 
     [:octicons-arrow-right-24: Climate and weather Platform](platforms/mlp.md)
+
+-   :fontawesome-solid-mountain-sun: __Getting Access__
+
+    A project is required to get access to resources on Alps.
+    Instructions on how to submit a project proposal is available on the main CSCS web site.
+    Start here if you are interested in getting access to Alps, SSH onto the system
+
+    [:octicons-arrow-right-24: Applying for an Alps project](https://www.cscs.ch/user-lab/applying-for-accounts)
+
+    !!! todo
+        focus more on ssh, mfa, sso, etc
+
+
+-   :fontawesome-solid-mountain-sun: __Alps__
+
+    Learn about the Alps instrastructure.
+
+    [:octicons-arrow-right-24: Alps Overview](alps/index.md)
+
+
+    [:octicons-arrow-right-24: Alps Hardware](alps/hardware.md)
+
+    [:octicons-arrow-right-24: Alps Network](alps/network.md)
+
+    [:octicons-arrow-right-24: Alps Storage](alps/storage.md)
+
 
 </div>
 
@@ -56,7 +68,8 @@ If you can't find the information that you need in the documentation, you can re
 
 # Tools and Services
 
-**Provide some links to the low level "how" documentation here.**
+!!! todo
+    Provide some links to the "how" documentation here.
 
 <div class="grid cards" markdown>
 

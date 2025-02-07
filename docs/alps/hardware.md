@@ -35,6 +35,7 @@ There are currently four node types in Alps, with another becoming available in 
 | AMD MI300A     |   64   |  128  |    512      | 512         |
 
 ### NVIDIA GH200 GPU Nodes
+[](){#gh200-hardware-description}
 
 Perry Peak
 
