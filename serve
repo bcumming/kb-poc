@@ -1,12 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-set -e
-
-prefix="$(pwd)"
-env="$prefix/pyenv"
-
-[[ ! -d "$env" ]] && echo "=== the environment needs to be configured - run './setup' first" && exit 1
-
-source "$env/bin/activate"
-
-mkdocs serve
+# use uv to run mkdocs with mkdocs-material and its dependencies installed
+uv tool run --from mkdocs-material mkdocs ${@:-serve}
