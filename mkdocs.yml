@@ -18,8 +18,15 @@ nav:
     - 'Tenants': alps/tenants.md
   - 'Platforms':
     - platforms/index.md
-    - 'Machine Learning Platform': platforms/mlp.md
-    - 'todi': platforms/todi.md
+    - 'HPC Platform':
+      - platforms/hpcp/index.md
+    - 'Machine Learning Platform':
+      - platforms/mlp/index.md
+      # we could move all vcluster descriptions to a vcluster/name.md
+      # then link them into the respective platform
+      - 'clariden': vclusters/clariden.md
+    - 'Climate and Weather Platform':
+      - platforms/cwp/index.md
   - 'Access':
     - access/index.md
     - 'MFA':
@@ -45,10 +52,6 @@ nav:
     - 'Python with pip': build-install/pip.md
   - 'Frequently asked questions':
     - faq/index.md
-    - Developers:
-      - faq/developers/index.md
-  - 'Rationale':
-    - rationale/index.md
 theme:
   name: material
   language: en

@@ -1,6 +1,6 @@
-# CSCS Knowledge Base
+# CSCS Documentation
 
-Welcome to the CSCS Knowledge Base - the home of technical documentation for Alps.
+Welcome to the techincal documentation for Alps.
 
 <div class="grid cards" markdown>
 
@@ -12,30 +12,19 @@ Welcome to the CSCS Knowledge Base - the home of technical documentation for Alp
 
     Go straight to the documentation for the platform that hosts your project:
 
-    [:octicons-arrow-right-24: Machine Learning Platform](platforms/mlp.md)
+    [:octicons-arrow-right-24: HPC Platform][hpcp]
 
-    [:octicons-arrow-right-24: HPC Platform](platforms/mlp.md)
+    [:octicons-arrow-right-24: Machine Learning Platform][mlp]
 
-    [:octicons-arrow-right-24: Climate and weather Platform](platforms/mlp.md)
-
--   :fontawesome-solid-mountain-sun: __Getting Access__
-
-    A project is required to get access to resources on Alps.
-    Instructions on how to submit a project proposal is available on the main CSCS web site.
-    Start here if you are interested in getting access to Alps, SSH onto the system
-
-    [:octicons-arrow-right-24: Applying for an Alps project](https://www.cscs.ch/user-lab/applying-for-accounts)
-
-    !!! todo
-        focus more on ssh, mfa, sso, etc
-
+    [:octicons-arrow-right-24: Climate and weather Platform][cwp]
 
 -   :fontawesome-solid-mountain-sun: __Alps__
 
-    Learn about the Alps instrastructure.
+    Learn more about the Alps research infrastructure
 
     [:octicons-arrow-right-24: Alps Overview](alps/index.md)
 
+    Get detailed information about the main components of the infrastructre
 
     [:octicons-arrow-right-24: Alps Hardware](alps/hardware.md)
 
@@ -44,11 +33,29 @@ Welcome to the CSCS Knowledge Base - the home of technical documentation for Alp
     [:octicons-arrow-right-24: Alps Storage](alps/storage.md)
 
 
+-   :fontawesome-solid-key: __Getting Access__
+
+    CSCS uses multifactor authentification for secure connection to our services and systems
+
+    [:octicons-arrow-right-24: Setting up MFA](./access/mfa/index.md)
+
+    [:octicons-arrow-right-24: Logging into vClusters][mfa-ssh]
+
+    Manage your project and team in the user management portal
+
+    [:octicons-arrow-right-24: User management portal](./access/ump.md)
+
+    A project is required to access resources on Alps
+
+    [:octicons-arrow-right-24: Applying for an Alps project](https://www.cscs.ch/user-lab/applying-for-accounts)
+
+
+
 </div>
 
 ## Get in Touch
 
-If you can't find the information that you need in the documentation, you can reach out to CSCS and other users.
+If you can't find the information that you need in the documentation, help is available.
 
 <div class="grid cards" markdown>
 

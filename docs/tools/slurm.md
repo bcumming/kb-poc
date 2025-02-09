@@ -1,3 +1,4 @@
+[](){#slurm}
 # SLURM
 
 CSCS uses the [SLURM](https://slurm.schedmd.com/documentation.html) as its workload manager to efficiently schedule and manage jobs on Alps vClusters.
@@ -16,8 +17,8 @@ Each type of node has different resource constraints and capabilities, which SLU
 
 The following sections will provide detailed guidance on how to use SLURM to request and manage CPU cores, memory, and GPUs in jobs. These instructions will help users optimize their workload execution and ensure efficient use of CSCS computing resources.
 
-### NVIDIA GH200 GPU Nodes
 [](){#gh200-slurm}
+### NVIDIA GH200 GPU Nodes
 
 !!! todo
     document how slurm can be used on the Grace-Hopper nodes.
@@ -51,8 +52,8 @@ An example of using tabs to show srun and sbatch useage to get one GPU per MPI r
     ```
 
 
-## AMD CPU
 [](){#amdcpu-slurm}
+## AMD CPU
 
 !!! todo
     document how slurm is configured on AMD CPU nodes (e.g. eiger)

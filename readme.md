@@ -1,8 +1,6 @@
-# CSCS Knowledge Base
+# CSCS Documentation
 
-The source CSCS Knowledge Base.
-
-The generated documentation can be viewed here: [bcummig.github.io/kb-poc](https://bcumming.github.io/kb-poc/)
+The source CSCS documentation [docs.cscs.ch](httpa://docs.cscs.ch)
 
 ## Getting Started
 

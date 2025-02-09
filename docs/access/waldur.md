@@ -1,9 +1,10 @@
+[](){#waldur}
 # User Management with Waldur
 
 CSCS Account Managers, PIs and deputy PIs can invite users to the respective projects following the below steps on CSCS's new project management portal.
 
 !!! info
-    The new user project management portal is currently only used by the [Machine Learning Platform](../platforms/mlp.md).
+    The new user project management portal is currently only used by the [Machine Learning Platform][mlp]
     All other platforms use the [user management portal (UMP)](ump.md)
 
 ## log in to the portal
