@@ -8,15 +8,35 @@ repo_url: https://github.com/bcumming/kb-poc
 edit_uri: edit/main/docs/
 
 nav:
-  - Home: index.md
-  - Getting started: getting-started/index.md
-  - Alps systems and platforms:
-    - alps-systems/index.md
-    - 'Hardware': alps-systems/hardware.md
-    - 'Platforms': alps-systems/platforms.md
-    - 'todi': alps-systems/todi.md
+  - Welcome: index.md
+  - 'Alps':
+    - alps/index.md
+    - 'Hardware': alps/hardware.md
+    - 'Network': alps/network.md
+    - 'Storage': alps/storage.md
+    - 'vClusters': alps/vclusters.md
+    - 'Tenants': alps/tenants.md
+  - 'Platforms':
+    - platforms/index.md
+    - 'HPC Platform':
+      - platforms/hpcp/index.md
+    - 'Machine Learning Platform':
+      - platforms/mlp/index.md
+      # we could move all vcluster descriptions to a vcluster/name.md
+      # then link them into the respective platform
+      - 'clariden': vclusters/clariden.md
+    - 'Climate and Weather Platform':
+      - platforms/cwp/index.md
+  - 'Access':
+    - access/index.md
+    - 'MFA':
+      - access/mfa/index.md
+      - 'using windows': access/mfa/windows.md
+    - 'UMP': access/ump.md
+    - 'Waldur': access/waldur.md
   - 'Tools':
     - tools/index.md
+    - 'slurm': tools/slurm.md
     - 'uenv': tools/uenv.md
   - 'Storage':
     - storage/index.md
@@ -32,10 +52,6 @@ nav:
     - 'Python with pip': build-install/pip.md
   - 'Frequently asked questions':
     - faq/index.md
-    - Developers:
-      - faq/developers/index.md
-  - 'Rationale':
-    - rationale/index.md
 theme:
   name: material
   language: en
@@ -86,6 +102,7 @@ plugins:
   - search:
       pipeline:
         - trimmer
+  - autorefs
 
 markdown_extensions:
   - admonition

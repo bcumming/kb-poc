@@ -1,13 +1,15 @@
 # Tools
 
-Documentation for tools like the following
+!!! todo
+    Documentation for tools used on the vClusters, including:
 
-* debuggers
-* profilers
-* uenv CLI tool
-* container engine
+    * slurm
+    * uenv
+    * container engine
+    * debuggers and profilers
 
-!!! note
     We document the tools and their interfaces here, but we don't put all the documentation for a tool here.
-    ie.g Documentation on how to build software using uenv, is in another section.
-    ie.g Documentation on how to use Podman to build containers, is in another section.
+
+    * e.g Documentation on how to build software using uenv, is in another section.
+    * e.g Documentation on how to use Podman to build containers, is in another section.
+

@@ -2,6 +2,9 @@
 
 Alps is a HPE Cray EX3000 system, a liquid cooled blade-based, high-density system.
 
+!!! todo
+    this is a skeleton - all of the details need to be filled in
+
 ## Alps Cabinets
 
 The basic building block of the system is a liquid-cooled cabinet.
@@ -32,6 +35,7 @@ There are currently four node types in Alps, with another becoming available in 
 | AMD MI300A     |   64   |  128  |    512      | 512         |
 
 ### NVIDIA GH200 GPU Nodes
+[](){#gh200-hardware-description}
 
 Perry Peak
 
@@ -53,7 +57,3 @@ Parry Peak
 
 !!! info "coming soon"
     H1 2025
-
-## Alps Storage
-
-TODO: storage

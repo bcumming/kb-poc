@@ -81,10 +81,10 @@ The node type (microarchitecture) that the uenv is built for:
 |[mi200]| 1 64-core AMD Milan (`zen3`)       | 4 AMD Mi250x GPUs  | |
 | zen3  | 2 64-core AMD Milan (`zen3`)       | - | only in MCH system |
 
-[gh200]: ../alps-systems/hardware.md#nvidia-gh200-gpu-nodes
-[a100]: ../alps-systems/hardware.md#nvidia-a100-gpu-nodes
-[zen2]: ../alps-systems/hardware.md#amd-rome-cpu-nodes
-[mi200]: ../alps-systems/hardware.md#amd-mi250x-gpu-nodes
+[gh200]: ../alps/hardware.md#nvidia-gh200-gpu-nodes
+[a100]: ../alps/hardware.md#nvidia-a100-gpu-nodes
+[zen2]: ../alps/hardware.md#amd-rome-cpu-nodes
+[mi200]: ../alps/hardware.md#amd-mi250x-gpu-nodes
 
 ### using labels
 
